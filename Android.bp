@@ -1,0 +1,23 @@
+package {
+    default_applicable_licenses: ["external_ksoap2_license"],
+}
+
+license {
+    name: "external_ksoap2_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: [
+        "NOTICE",
+    ],
+}
+
+java_import {
+    name: "ksoap2",
+    jars: ["share/ksoap2/ksoap2.jar"],
+    sdk_version: "system_current",
+    min_sdk_version: "30",
+    apex_available: ["com.android.wifi"],
+}
